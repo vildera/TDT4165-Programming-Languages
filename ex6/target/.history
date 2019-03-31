@@ -1,0 +1,7 @@
+sbt
+stb
+sbt
+clean combine run
+clean compile run
+sbt clean compile run
+exit

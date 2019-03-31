@@ -1,0 +1,374 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-12 12:33:21.474326 UTC
+
+interface ex2code-0.1.0.0-4IX3Vm3pyfI7zVsSPkgc1:Lib 8022
+  interface hash: 8720a1d42ae446c4ddab6d5e5aeac1a2
+  ABI hash: 146a9b17b14b4f8b8c7022d1adac6728
+  export-list hash: 141f557f9d03f2337865b9b1880032fc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.f0
+  Lib.f1
+  Lib.f2
+  Lib.filterPos
+  Lib.filterPosMany
+  Lib.flip3
+  Lib.iterate
+  Lib.map
+  Lib.safeHead
+  Lib.safeHeadList
+  Lib.take
+  Lib.Maybe{Lib.None Lib.Some}
+module dependencies:
+package dependencies: base-4.10.1.0* ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.Tuple 8fa1305aa5032ea35e2a54fa5f1e78f9
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+362c2b64bae895c8d08e671596a3640e
+  $fEqMaybe :: GHC.Classes.Eq a => GHC.Classes.Eq (Lib.Maybe a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (Lib.Maybe a)
+                  (Lib.$fEqMaybe_$c== @ a v)
+                  (Lib.$fEqMaybe_$c/= @ a v) -}
+362c2b64bae895c8d08e671596a3640e
+  $fEqMaybe_$c/= ::
+    GHC.Classes.Eq a => Lib.Maybe a -> Lib.Maybe a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Lib.Maybe a)
+                   (b :: Lib.Maybe a) ->
+                 case a1 of wild {
+                   Lib.Some a2
+                   -> case b of wild1 {
+                        Lib.Some b1
+                        -> case GHC.Classes.== @ a $dEq a2 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False }
+                        Lib.None -> GHC.Types.True }
+                   Lib.None
+                   -> case b of wild1 {
+                        Lib.Some ipv -> GHC.Types.True Lib.None -> GHC.Types.False } }) -}
+362c2b64bae895c8d08e671596a3640e
+  $fEqMaybe_$c== ::
+    GHC.Classes.Eq a => Lib.Maybe a -> Lib.Maybe a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: Lib.Maybe a)
+                   (ds1 :: Lib.Maybe a) ->
+                 case ds of wild {
+                   Lib.Some a1
+                   -> case ds1 of wild1 {
+                        Lib.Some b1 -> GHC.Classes.== @ a $dEq a1 b1
+                        Lib.None -> GHC.Types.False }
+                   Lib.None
+                   -> case ds1 of wild1 {
+                        Lib.Some ipv -> GHC.Types.False Lib.None -> GHC.Types.True } }) -}
+362c2b64bae895c8d08e671596a3640e
+  $fShowMaybe :: GHC.Show.Show a => GHC.Show.Show (Lib.Maybe a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(C(U))),A,A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (Lib.Maybe a)
+                  (Lib.$fShowMaybe_$cshowsPrec @ a v)
+                  (Lib.$fShowMaybe_$cshow @ a v)
+                  (Lib.$fShowMaybe_$cshowList @ a v) -}
+3ca9da69a43f9300e8e68b167eeea536
+  $fShowMaybe1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+3563be4daa22d533e42696df2326dc1a
+  $fShowMaybe2 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Lib.$fShowMaybe3) -}
+a973133311d9e69a043e7a0fb049c133
+  $fShowMaybe3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Lib.$fShowMaybe4) -}
+22fe1ded3769c461c73a3f50de741312
+  $fShowMaybe4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("None"#) -}
+09789b0422622ab5d2345edb905a64de
+  $fShowMaybe5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Lib.$fShowMaybe6) -}
+645f2d36bd5c5fe8836eaba4ed1ace7a
+  $fShowMaybe6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Some "#) -}
+41ca85edeaed606db4f883e24458a051
+  $fShowMaybe7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+362c2b64bae895c8d08e671596a3640e
+  $fShowMaybe_$cshow ::
+    GHC.Show.Show a => Lib.Maybe a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
+     Unfolding: (\ @ a ($dShow :: GHC.Show.Show a) (x :: Lib.Maybe a) ->
+                 case x of wild {
+                   Lib.Some b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Lib.$fShowMaybe5
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           Lib.$fShowMaybe7
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char))
+                   Lib.None -> Lib.$fShowMaybe3 }) -}
+362c2b64bae895c8d08e671596a3640e
+  $fShowMaybe_$cshowList ::
+    GHC.Show.Show a => [Lib.Maybe a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Lib.Maybe a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Lib.Maybe a)
+                   (Lib.$fShowMaybe_$cshowsPrec @ a $dShow Lib.$fShowMaybe1)
+                   eta
+                   eta1) -}
+362c2b64bae895c8d08e671596a3640e
+  $fShowMaybe_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> Lib.Maybe a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(U)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (a1 :: GHC.Types.Int)
+                   (ds :: Lib.Maybe a) ->
+                 case ds of wild {
+                   Lib.Some b1
+                   -> case a1 of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a $dShow Lib.$fShowMaybe7 b1
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Lib.$fShowMaybe5 (g x1)
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Lib.$fShowMaybe5
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x1))) } }
+                   Lib.None -> Lib.$fShowMaybe2 }) -}
+b5762ab9679d9f37c9e75b46b008968c
+  $tc'None :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12976328931528692123##
+                   6103447439997268532##
+                   Lib.$trModule
+                   Lib.$tc'None2
+                   1#
+                   Lib.$tc'None1) -}
+03c2b638dad8e4658bb2e4eb5e716611
+  $tc'None1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+a15295010893667a5d995aed5646742d
+  $tc'None2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$tc'None3) -}
+0b1ae65ffb06aa70b6214264cf59c279
+  $tc'None3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'None"#) -}
+4a4184bc146969314366507f739487b5
+  $tc'Some :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17662930219579935875##
+                   10834491197894804132##
+                   Lib.$trModule
+                   Lib.$tc'Some2
+                   1#
+                   Lib.$tc'Some1) -}
+19b186391b25e51780f10ea68d03647f
+  $tc'Some1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+939df53d4dc02067a377bd03d46a6f72
+  $tc'Some2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$tc'Some3) -}
+3043630c5ec6b7f60bfdcd390b697699
+  $tc'Some3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Some"#) -}
+c7787517e708b5d1c57c17b37f25d754
+  $tcMaybe :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7348152319448867444##
+                   15206544899490661523##
+                   Lib.$trModule
+                   Lib.$tcMaybe1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+4045238211c222538eed5f5777a61a06
+  $tcMaybe1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$tcMaybe2) -}
+92842d0681661de4035c5e6280187fee
+  $tcMaybe2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Maybe"#) -}
+971d2a899892af97c1ae801c4c1e4269
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule3 Lib.$trModule1) -}
+5051c861b459ffff8c657ca58e6afb2f
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$trModule2) -}
+064c084e3f74b4d9731b7b9a296363ed
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Lib"#) -}
+c2b35aee8eb65c3834ecad36e9e42307
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$trModule4) -}
+bea5bdb7a7a94923336b7fa3a941c711
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("ex2code-0.1.0.0-4IX3Vm3pyfI7zVsSPkgc1"#) -}
+ccce1c3f36d88228835807c90a3c7f6b
+  $witerate :: (a -> a) -> a -> (# a, [a] #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><L,U>,
+     Inline: [0] -}
+451d743c48a07cb6ce8c5894c5d8f812
+  $wtake :: GHC.Prim.Int# -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,1*U>, Inline: [0] -}
+362c2b64bae895c8d08e671596a3640e
+  data Maybe a = Some a | None
+82c9fc516fd284a1786c8a2078bba68f
+  f0 :: a -> a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True) (\ @ a (a1 :: a) -> a1) -}
+d96b6e6efb642ee2cccb227127176988
+  f1 :: a -> b -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ b (a1 :: a) (ds :: b) -> a1) -}
+b5ffe5c97ead9844b9f82a2fc1db35cf
+  f2 :: a -> b -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ b (ds :: a) (b1 :: b) -> b1) -}
+357cb6f5499cfcece68430823912c244
+  filterPos :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (GHC.List.filter @ GHC.Types.Int Lib.filterPos1) -}
+8b4c734c159ebf361c1c3ab70dcc8814
+  filterPos1 :: GHC.Types.Int -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: GHC.Types.Int) ->
+                 case x of wild { GHC.Types.I# x1 ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.>=# x1 0#) }) -}
+862c00dce4354e376fca86c8a56fff28
+  filterPosMany :: [[GHC.Types.Int]] -> [[GHC.Types.Int]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (list :: [[GHC.Types.Int]]) ->
+                 Lib.filterPosMany_go list) -}
+0fb949c5c86016f245ef699763e9bf98
+  filterPosMany_go :: [[GHC.Types.Int]] -> [[GHC.Types.Int]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+931878b226f25f3190c128dd29bbd60c
+  flip3 :: (a -> b -> c -> d) -> c -> b -> a -> d
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <C(C(C(S))),1*C1(C1(C1(U)))><L,U><L,U><L,U>,
+     Unfolding: InlineRule (4, True, True)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   (function :: a -> b -> c -> d)
+                   (a1 :: c)
+                   (b1 :: b)
+                   (c1 :: a) ->
+                 function c1 b1 a1) -}
+273a4831014422a7e572a3359184ee5a
+  iterate :: (a -> a) -> a -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><L,U>m2,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: a -> a) (w1 :: a) ->
+                 case Lib.$witerate @ a w w1 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ a ww1 ww2 }) -}
+de6e9f93fa37f77c4d985d0ff139ff5c
+  map :: (a -> b) -> [a] -> [b]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: (\ @ a @ b (func :: a -> b) (list :: [a]) ->
+                 letrec {
+                   go :: [a] -> [b] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [a]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ b : y ys -> GHC.Types.: @ b (func y) (go ys) }
+                 } in
+                 go list) -}
+897d46cb8d0695a1801f49d4e80ea8c2
+  safeHead :: [a] -> Lib.Maybe a
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (list :: [a]) ->
+                 case Lib.take @ a Lib.safeHead2 list of wild {
+                   [] -> Lib.None @ a
+                   : x ds
+                   -> case ds of wild1 {
+                        [] -> Lib.Some @ a x : ipv ipv1 -> Lib.safeHead1 @ a } }) -}
+3001fc0508794551b761fb6131e5e64e
+  safeHead1 :: Lib.Maybe a
+  {- Strictness: x -}
+6fe1fde73f8bd180919710ccd02be4c4
+  safeHead2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+7b7fa1c591b2a1e56457a27341c64ec2
+  safeHeadList :: [a] -> [a]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (list :: [a]) -> Lib.take @ a Lib.safeHead2 list) -}
+aaa096ed1e37a5729dc723217b5a8dd3
+  take :: GHC.Types.Int -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><L,1*U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: GHC.Types.Int) (w1 :: [a]) ->
+                 case w of ww { GHC.Types.I# ww1 -> Lib.$wtake @ a ww1 w1 }) -}
+instance [safe] GHC.Classes.Eq [Lib.Maybe] = Lib.$fEqMaybe
+instance [safe] GHC.Show.Show [Lib.Maybe] = Lib.$fShowMaybe
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,11 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/vildearntze/Desktop/Progspråk/ex6/target/scala-2.12/ex6_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Hello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/vildearntze/Desktop/Progspråk/ex6/target/scala-2.12/classes/Hello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Hello$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/vildearntze/Desktop/Progspråk/ex6/target/scala-2.12/classes/Hello$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Hello$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/vildearntze/Desktop/Progspråk/ex6/target/scala-2.12/classes/Hello$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Hello.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/vildearntze/Desktop/Progspråk/ex6/target/scala-2.12/classes/Hello.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
